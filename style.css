@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+	--DarkGray: hsl(249, 10%, 26%);
+  	--LightGray: hsl(0, 0%, 87%);
+  	--DarkGreen: hsl(154, 57%, 46%);
+	--white: hsl(0, 0%, 100%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--red);
+	background-image: url(/images/bg-intro-mobile.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	background-size: cover;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-semi-bold {
+  font-weight: 600;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-regular { 
+  font-weight: 400;
+}
+.container {
+    padding: 0 10px;
+ 	max-width: 1180px;
+ 	margin: 0 auto;
+}
+.sr-only {
+    position: absolute;
+    margin: -1px 0 0 -1px;
+    padding: 0;
+    display: block;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    outline: 0;
+}
+.promotion {
+    min-width: 300px;
+	max-width: 1110px;
+	background-color: transparent;
+	margin: 92px auto 92px;
+}
+.promotion__details {
+	text-align: center;
+	color: var(--white);
+	margin-bottom: 62px;
+}
+.promotion__title {
+	font-size: 27px;
+	line-height: 1.3;
+	margin-bottom: 24px;
+}
+.promotion__info {
+	line-height: 1.65;
+	margin-bottom: 10px;
+}
+.promotion__trial {
+	color: var(--white);
+	font-size: 15px;
+	text-align: center;
+	display: inline-block;
+	padding: 16px 55px;
+	background-color: var(--blue);
+	border-radius: 10px;
+	line-height: 1.95;
+  	letter-spacing: 0.2px;
+  	box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+	margin-bottom: 20px;
+	width: 100%;
+}
+.promotion__form {
+	padding: 25px;
+	background-color: var(--white);
+	border-radius: 10px;
+	box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.promotion__input-field {
+	width: 100%;
+	display: block;
+	margin-bottom: 15px;
+}
+.promotion__input-field input {
+	width: 100%;
+	display: block;
+	padding: 15px 15px;
+	border-radius: 5px;
+	border: 1px solid var(--LightGray);
+	line-height: 1.85;
+  	color: var(--DarkGray);
+  	font-size: 14px;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+}
+.promotion__input-field input::placeholder {
+	color: var(--DarkGray);
+	opacity: 0.4;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.promotion__input-field input:focus {
+  	border: 1px solid var(--blue);
+}
+.promotion__input-field input.error {
+	background-image: url(./images/icon-error.svg);
+	background-position: right 20px center;
+	background-repeat: no-repeat;
+	border: 2px solid var(--red);
+	color: var(--red);
+	caret-color: var(--red);
+}
+p.error-msg {
+	color: var(--red);
+	font-size: 11px;
+	font-style: italic;
+	margin-top: 5px;
+	display: none;
+	text-align: right;
+}
+p.error-msg.show {
+  	display: block;
+}
+.promotion__btn {
+	background-color: var(--Green);
+	border: none;
+	padding: 15px;
+	border-radius: 5px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1.73;
+	color: var(--white);
+	text-align: center;
+	width: 100%;
+	box-shadow: inset 0px -4px 0px var(--DarkGreen);
+	cursor: pointer;
+	margin-bottom: 12px;
+	transition: all 0.2s ease;
+	background-color: var(--green);
+}
+.promotion__btn:hover {
+	transform: translate(0, -2px);
+	opacity: 75%;
+}
+.promotion__btn:active {
+	transform: translate(0, 1px);
+	box-shadow: inset 0px -2px 0px var(--DarkGreen);
+}
+.promotion__policy {
+	font-size: 10px;
+	color: var(--grayish-blue);
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2;
+	letter-spacing: 0.5px;
+	padding: 0 20px;
+}
+.promotion__policy .promotion__terms {
+	color: var(--red);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.promotion__policy .promotion__terms:hover {
+	opacity: 80%;
+	text-decoration: underline;
+}
+@media screen and (min-width: 375px) {
+	.container {
+		padding: 0 25px;
+	}
+}
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+	.container {
+		padding: 0 70px;
+		max-width: 700px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	body {
+		background-image: url(/images/bg-intro-desktop.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	.promotion {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.promotion__details {
+		width: 50%;
+		text-align: left;
+		margin-bottom: 0;
+}
+	.promotion__title {
+		font-size: 49px;
+		line-height: 1.2;
+		margin-bottom: 27px;
+	}
+	.promotion__signup {
+		width: 48.6%;
+	}
+	.promotion__form {
+		padding: 40px;
+	}
+	.promotion__input-field {
+		margin-bottom: 20px;
+	}
+	.promotion__input-field input {
+		font-size: 15px;
+		padding: 14px 30px;
+}
+}
